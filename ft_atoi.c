@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 16:02:57 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/26 09:08:30 by rleseur          ###   ########.fr       */
+/*   Created: 2021/11/26 10:31:56 by rleseur           #+#    #+#             */
+/*   Updated: 2021/11/26 11:12:57 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "headers/printf.h"
 
-void	ft_putnbr(int nb, int **count)
+int	ft_atoi(char *s)
 {
-	long	n;
+		int	res;
+		int	i;
 
-	n = nb;
-	if (n < 0)
-	{
-		n = -n;
-		**count += 1;
-		ft_putchar('-');
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10, count);
-		ft_putchar((n % 10) + '0');
-	}
-	else
-		ft_putchar(n + '0');
-	**count += 1;
+		res = 0;
+		i = -1;
+		while (s[++i] >= '0' && s[i] <= '9')
+		{
+				res *= 10;
+				res += s[i] - '0';
+		}
+		return (res);
 }
