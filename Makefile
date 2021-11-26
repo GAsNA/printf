@@ -6,11 +6,19 @@
 #    By: rleseur <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 13:54:15 by rleseur           #+#    #+#              #
-#    Updated: 2021/11/25 12:01:34 by rleseur          ###   ########.fr        #
+#    Updated: 2021/11/26 14:10:15 by rleseur          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =			
+SRCS =			display.c		\
+				flags.c			\
+				ft_atoi.c		\
+				ft_printf.c		\
+				ft_putaddr.c	\
+				ft_putchar.c	\
+				ft_puthexa.c	\
+				ft_putnbr.c		\
+				ft_putstr.c
 
 OBJS =			${SRCS:.c=.o}
 

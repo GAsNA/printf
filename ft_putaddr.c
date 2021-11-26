@@ -6,7 +6,7 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:54:43 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/25 18:03:09 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/11/26 14:19:08 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	ft_putaddr(size_t num)
 		num = num / 16;
 		i++;
 	}
-	str[i] = '\0';
 	len = i;
 	ft_putstr("0x");
+	i--;
 	while (i >= 0)
 	{
 		write(1, &str[i], 1);
