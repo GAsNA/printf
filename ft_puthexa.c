@@ -6,7 +6,7 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:06:08 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/25 17:59:36 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/11/30 10:41:24 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,43 +25,23 @@ int	ft_len_tab(long n)
 	return (len);
 }
 
-int	ft_puthexa(int nb, char	*hexa)
+void	ft_puthexa(int nb, char *hexa, int **count)
 {
 	long	n;
-	char	*tab;
-	int		len_tab;
-	int		i;
-	int		count;
 
 	n = nb;
-	count = 0;
-	if (n == 0)
+	if (n < 0)
 	{
-		count++;
-		ft_putchar('0');
+		n = -n;
+		**count += 1;
+		ft_putchar('-');
+	}
+	if (n >= 16)
+	{
+		ft_puthexa(n / 16, hexa, count);
+		ft_putchar(hexa[n % 16]);
 	}
 	else
-	{
-		if (n < 0)
-		{
-			ft_putchar('-');
-			count++;
-			n = -n;
-		}
-		len_tab = ft_len_tab(n);
-		tab = malloc((len_tab + 1) * sizeof(char));
-		if (!tab)
-			return (0);
-		i = len_tab - 1;
-		while (n > 0)
-		{
-			tab[i] = hexa[n % 16];
-			n /= 16;
-			i--;
-		}
-		tab[len_tab] = '\0';
-		count += len_tab;
-		ft_putstr(tab);
-	}
-	return (count);
+		ft_putchar(hexa[n]);
+	**count += 1;
 }

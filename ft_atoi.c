@@ -6,7 +6,7 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:31:56 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/26 11:12:57 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/11/29 10:15:08 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_atoi(char *s)
 {
-		int	res;
-		int	i;
+	int	res;
+	int	i;
 
-		res = 0;
-		i = -1;
-		while (s[++i] >= '0' && s[i] <= '9')
-		{
-				res *= 10;
-				res += s[i] - '0';
-		}
-		return (res);
+	res = 0;
+	i = -1;
+	while (s[++i] >= '0' && s[i] <= '9')
+	{
+		res *= 10;
+		res += s[i] - '0';
+	}
+	return (res);
 }

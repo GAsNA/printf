@@ -6,7 +6,7 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:45:43 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/26 14:14:58 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/11/30 15:49:35 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	display_s(const char *s, va_list args)
 {
-	int	i;
-	int	count;
-	int	count_arg;
+	int		i;
+	int		count;
+	int		count_arg;
+	t_flags	flags;
 
 	count = 0;
 	count_arg = 0;
@@ -26,6 +27,7 @@ int	display_s(const char *s, va_list args)
 		if (s[i] == '%')
 		{
 			i++;
+			flags = get_flags;
 			i = display_w_flag(s, i, args, &count_arg);
 		}
 		else
@@ -77,9 +79,9 @@ void	display_arg(const char *s, int i, va_list args, int *count)
 	else if (s[i] == 'i' || s[i] == 'd' || s[i] == 'u')
 		ft_putnbr(va_arg(args, int), &count);
 	else if (s[i] == 'x')
-		*count += ft_puthexa(va_arg(args, int), "0123456789abcdef");
+		ft_puthexa(va_arg(args, int), "0123456789abcdef", &count);
 	else if (s[i] == 'X')
-		*count += ft_puthexa(va_arg(args, int), "0123456789ABCDEF");
+		ft_puthexa(va_arg(args, int), "0123456789ABCDEF", &count);
 	else if (s[i] == '%')
 		*count += ft_putchar('%');
 }

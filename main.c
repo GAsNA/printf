@@ -6,7 +6,7 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:56:30 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/26 14:17:08 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/11/29 12:38:41 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	main(void)
 	len = ft_printf("Affiche une chaine de caractere: %s\n", "Bonjour je m'appelle Romane.");
 	len_p = printf("Affiche une chaine de caractere: %s\n", "Bonjour je m'appelle Romane.");
 	printf("\tlen: %i ---> %i\n", len, len_p);
-	len = ft_printf("Affiche une adresse: %p\n", &addr);
-	len_p = printf("Affiche une adresse: %p\n", &addr);
+	len = ft_printf("Affiche une adresse: %p\n", &len);
+	len_p = printf("Affiche une adresse: %p\n", &len);
 	printf("\tlen: %i ---> %i\n", len, len_p);
 	len = ft_printf("Affiche un double: %d\n", 42);
 	len_p = printf("Affiche un double: %d\n", 42);
