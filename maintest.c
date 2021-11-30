@@ -3,6 +3,8 @@
 int main()
 {
 	void	*test;
+	printf("<<------- BASIC ------->>\n\n");
+	
 	// i
 	printf("05i: %05i|\n", 42);
 	printf(".5i: %.5i|\n", 47);
@@ -60,6 +62,7 @@ int main()
 	printf("\n");
 
 	//		Combinaisons
+	printf("<<------- COMBINAISONS ------->>\n\n");
 	// 0.
 //	printf("05.5i: %05.5i|\n", 42);
 //	printf("05.5c: %05.5c|\n", 'p');
@@ -68,6 +71,42 @@ int main()
 //	printf("05.5d: %05.5d|\n", 7);
 //	printf("05.5u: %05.5u|\n", 157);
 //	printf("05.5x: %05.5x|\n", 142);
+//	printf("\n");
+
+	// 0-
+//	printf("05.5i: %05-5i|\n", 42);
+//	printf("05.5c: %05-5c|\n", 'p');
+//	printf("05.5s: %05-5s|\n", "Hel");
+//	printf("015.15p: %015-15p|\n", &test);
+//	printf("05.5d: %05-5d|\n", 7);
+//	printf("05.5u: %05-5u|\n", 157);
+//	printf("05.5x: %05-5x|\n", 142);
+//	printf("\n");
+
+	// 0 juste un chiffre, impossible
+	
+	// -. (tiret obligatoire devant)
+	printf("-15.5i: %-15.5i|\n", 42);
+//	printf("-15.5c: %-15.5c|\n", 'p');
+	printf("-15.5s: %-15.5s|\n", "Hel");
+//	printf("-15.20p: %-15.20p|\n", &test);
+	printf("-15.5d: %-15.5d|\n", 7);
+	printf("-15.5u: %-15.5u|\n", 157);
+	printf("-15.5x: %-15.5x|\n", 142);
+	printf("\n");
+
+	// . juste chiffre
+        printf("15.5i: %15.5i|\n", 42);
+//	printf("15.5c: %15.5c|\n", 'p');
+        printf("15.5s: %15.5s|\n", "Hel");
+//	printf("15.20p: %15.20p|\n", &test);
+        printf("15.5d: %15.5d|\n", 7);
+        printf("15.5u: %15.5u|\n", 157);
+        printf("15.5x: %15.5x|\n", 142);
+	printf("\n");
+
+	// - juste un chiffre, impossible
+
 }
 
 // '0' et '.' --> ajout de zero avant
