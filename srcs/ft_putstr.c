@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 12:16:47 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/25 17:35:23 by rleseur          ###   ########.fr       */
+/*   Created: 2021/11/25 16:00:21 by rleseur           #+#    #+#             */
+/*   Updated: 2021/12/03 10:24:42 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/printf.h"
+#include "../headers/ft_printf.h"
 
-int	ft_printf(const char *s, ...)
+int	ft_putstr(char *str)
 {
-	va_list	args;
-	int		count;
+	int	i;
 
-	va_start(args, s);
-	count = display_s(s, args);
-	return (count);
+	if (!str)
+		str = "(null)";
+	i = -1;
+	while (str[++i])
+		ft_putchar(str[i]);
+	return (i);
 }

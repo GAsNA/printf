@@ -6,19 +6,20 @@
 #    By: rleseur <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 13:54:15 by rleseur           #+#    #+#              #
-#    Updated: 2021/11/26 14:10:15 by rleseur          ###   ########.fr        #
+#    Updated: 2021/12/03 09:15:16 by rleseur          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =			display.c		\
-				flags.c			\
-				ft_atoi.c		\
-				ft_printf.c		\
-				ft_putaddr.c	\
-				ft_putchar.c	\
-				ft_puthexa.c	\
-				ft_putnbr.c		\
-				ft_putstr.c
+DIR =			srcs/
+
+SRCS =			${DIR}display.c		\
+				${DIR}ft_atoi.c		\
+				${DIR}ft_printf.c	\
+				${DIR}ft_putaddr.c	\
+				${DIR}ft_putchar.c	\
+				${DIR}ft_puthexa.c	\
+				${DIR}ft_putnbr.c	\
+				${DIR}ft_putstr.c
 
 OBJS =			${SRCS:.c=.o}
 

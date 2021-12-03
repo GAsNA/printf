@@ -6,11 +6,11 @@
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:31:56 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/29 10:15:08 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/12/03 10:23:44 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/printf.h"
+#include "../headers/ft_printf.h"
 
 int	ft_atoi(char *s)
 {

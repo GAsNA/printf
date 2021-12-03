@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 15:51:11 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/25 17:41:22 by rleseur          ###   ########.fr       */
+/*   Created: 2021/11/25 16:06:08 by rleseur           #+#    #+#             */
+/*   Updated: 2021/12/03 10:24:23 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/printf.h"
+#include "../headers/ft_printf.h"
 
-int	ft_putchar(char c)
+void	ft_puthexa(int nb, char *hexa, int **count)
 {
-	write(1, &c, 1);
-	return (1);
+	long	n;
+
+	n = nb;
+	if (n < 0)
+		n += 4294967296;
+	if (n >= 16)
+	{
+		ft_puthexa(n / 16, hexa, count);
+		ft_putchar(hexa[n % 16]);
+	}
+	else
+		ft_putchar(hexa[n]);
+	**count += 1;
 }

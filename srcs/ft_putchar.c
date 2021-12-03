@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flags.c                                            :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 13:13:05 by rleseur           #+#    #+#             */
-/*   Updated: 2021/11/30 10:53:28 by rleseur          ###   ########.fr       */
+/*   Created: 2021/11/25 15:51:11 by rleseur           #+#    #+#             */
+/*   Updated: 2021/12/03 10:24:13 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/printf.h"
+#include "../headers/ft_printf.h"
 
-void	init_flags(struct s_flags *flags)
+int	ft_putchar(char c)
 {
-	flags->minus = 0;
-	flags->zero = 0;
-	flags->point = 0;
-	flags->hash = 0;
-	flags->space = 0;
-	flags->plus = 0;
+	write(1, &c, 1);
+	return (1);
 }
