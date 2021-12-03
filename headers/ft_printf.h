@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rleseur <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:25:01 by rleseur           #+#    #+#             */
-/*   Updated: 2021/12/03 10:23:16 by rleseur          ###   ########.fr       */
+/*   Updated: 2021/12/03 10:40:22 by rleseur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_putchar(char c);
 int		ft_putstr(char *str);
 
 void	ft_putnbr(int nb, int **count);
-void	ft_putnbru(unsigned int, int **count);
+void	ft_putnbru(unsigned int nb, int **count);
 
 void	ft_puthexa(int nb, char *hexa, int **count);
 
